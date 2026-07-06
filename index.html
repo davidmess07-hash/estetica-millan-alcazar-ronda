@@ -822,16 +822,6 @@
     startAuto();
   })();
 
-<style>
-  /* Este estilo controla el tamaño en móviles */
-  @media (max-width: 768px) {
-    #baSlider { 
-        height: 600px !important; 
-    }
-  }
-</style>
-
-<script>
   // ===== Before / After Slider =====
   (function initBA(){
     const slider = document.getElementById('baSlider');
@@ -879,6 +869,7 @@
     if (afterImg.complete) setWidthPx();
     else afterImg.addEventListener('load', setWidthPx);
     setWidthPx();
+    // Init at 50%
     afterWrap.style.width = '50%';
     handle.style.left = '50%';
   })();
