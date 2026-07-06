@@ -873,15 +873,15 @@
     afterWrap.style.width = '50%';
     handle.style.left = '50%';
   })();
-  /* --- Ajuste para móviles --- */
-// Esto es CSS que inyectamos al vuelo para cambiar el alto del slider en móviles
+/* --- Ajuste para móviles --- */
 const style = document.createElement('style');
 style.innerHTML = `
   @media (max-width: 768px) {
-    #baSlider { aspect-ratio: 1.2 / 1 !important; }
+    #baSlider { aspect-ratio: 1.1 / 1 !important; height: 350px !important; }
   }
 `;
 document.head.appendChild(style);
+
 
 </script>
 
