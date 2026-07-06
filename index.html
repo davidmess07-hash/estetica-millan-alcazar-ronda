@@ -873,16 +873,20 @@
     afterWrap.style.width = '50%';
     handle.style.left = '50%';
   })();
-/* --- Ajuste final: sin bordes negros y con mejor tamaño --- */
+/* --- Ajuste final: eliminar barras negras y ajustar imagen --- */
 const style = document.createElement('style');
 style.innerHTML = `
   @media (max-width: 768px) {
-    #baSlider { aspect-ratio: 1.4 / 1 !important; height: auto !important; min-height: 280px !important; }
-    .ba > img, .ba-after-img { object-fit: cover !important; background-color: transparent !important; }
+    #baSlider { aspect-ratio: 1 / 1.1 !important; height: auto !important; min-height: 350px !important; }
+    .ba > img, .ba-after-img { 
+        object-fit: cover !important; 
+        object-position: center !important; 
+        width: 100% !important; 
+        height: 100% !important; 
+    }
   }
 `;
 document.head.appendChild(style);
-
 
 </script>
 
