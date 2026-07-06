@@ -822,24 +822,7 @@
     startAuto();
   })();
 
- <style>
-  /* Ajuste de altura del slider solo en móviles */
-  @media (max-width: 768px) {
-    #baSlider {
-        height: 400px !important;
-    }
-    
-    #baSlider img, 
-    #baAfterWrap, 
-    .ba-after-img {
-        height: 100% !important;
-        object-fit: cover !important;
-    }
-  }
-</style>
-
-<script>
-  // ===== Before / After Slider =====
+// ===== Before / After Slider =====
   (function initBA(){
     const slider = document.getElementById('baSlider');
     if (!slider) return;
@@ -889,9 +872,11 @@
     // Init at 50%
     afterWrap.style.width = '50%';
     handle.style.left = '50%';
+    <style>
+  @media (max-width: 768px) {
+    #baSlider { 
   })();
 </script>
 
 </body>
 </html>
-
