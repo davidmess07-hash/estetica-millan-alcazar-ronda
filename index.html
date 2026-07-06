@@ -873,15 +873,12 @@
     afterWrap.style.width = '50%';
     handle.style.left = '50%';
   })();
-/* --- Ajuste final: formato natural sin deformar --- */
+/* --- Ajuste para móviles: más ancho y ajustado --- */
 const style = document.createElement('style');
 style.innerHTML = `
   @media (max-width: 768px) {
-    #baSlider { aspect-ratio: 1.8 / 1 !important; height: auto !important; min-height: 200px !important; }
-    .ba > img, .ba-after-img { 
-        object-fit: cover !important; 
-        object-position: center !important; 
-    }
+    #baSlider { aspect-ratio: 1.6 / 1 !important; height: auto !important; min-height: 220px !important; }
+    .ba > img, .ba-after-img { object-fit: contain !important; background-color: #000; }
   }
 `;
 document.head.appendChild(style);
